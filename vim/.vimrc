@@ -14,12 +14,12 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'udalov/kotlin-vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'shougo/neocomplete.vim'
 Plugin 'townk/vim-autoclose'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'hdima/python-syntax'
+Plugin 'mhartington/oceanic-next'
 
 Plugin 'ryanoasis/vim-devicons'
 
@@ -37,10 +37,15 @@ filetype plugin indent on    " required
 " Nerdtree
 autocmd vimenter * NERDTree
 
-" Solarized Theme
+" Theme
 syntax enable
-set background=dark
-colorscheme solarized
+
+" for vim 8
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+colorscheme OceanicNext
 
 " Javacomplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
