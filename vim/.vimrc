@@ -20,6 +20,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'hdima/python-syntax'
 Plugin 'mhartington/oceanic-next'
+Plugin 'majutsushi/tagbar'
+Plugin 'universal-ctags/ctags'
+Plugin 'tpope/vim-sensible'
+Plugin 'kien/ctrlp.vim'
 
 Plugin 'ryanoasis/vim-devicons'
 
@@ -36,6 +40,7 @@ filetype plugin indent on    " required
 " Configs
 " Nerdtree
 autocmd vimenter * NERDTree
+nmap <F4> :NERDTreeFocus<CR>
 
 " Theme
 syntax enable
@@ -55,3 +60,9 @@ let g:neocomplete#enable_at_startup = 1
 
 " Devicons
 set encoding=UTF-8
+
+" Relative line numbers
+:set number relativenumber
+
+" Tagbar
+nmap <F5> :TagbarToggle<CR>
