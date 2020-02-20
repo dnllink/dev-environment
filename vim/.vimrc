@@ -23,7 +23,9 @@ Plugin 'mhartington/oceanic-next'
 Plugin 'majutsushi/tagbar'
 Plugin 'universal-ctags/ctags'
 Plugin 'tpope/vim-sensible'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-dispatch'
+Plugin 'hdiniz/vim-gradle'
 
 Plugin 'ryanoasis/vim-devicons'
 
@@ -66,3 +68,19 @@ set encoding=UTF-8
 
 " Tagbar
 nmap <F5> :TagbarToggle<CR>
+
+" Leader key
+let mapleader = ','
+
+" CtrlP
+set wildignore+=*/build/*
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
